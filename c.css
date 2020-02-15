@@ -1,0 +1,59 @@
+.header {
+  background-color: tomato;
+}
+
+.main {
+  background-color: deepskyblue;
+}
+
+.main ul {
+  text-align: left;
+}
+
+.aside-1 {
+  background-color: gold;
+}
+
+.aside-2 {
+  background-color: hotpink;
+}
+
+footer {
+  background-color: lightgreen;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+/* flex: flex-grow flex-shrink flex-basis 
+  when set flex-shrink to 0, its minimusize is its content size and it is wrapped in one row.
+*/
+.container > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 0;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .aside-1 {
+    order: 1;
+  }
+  .main {
+    flex: 2 0;
+    order: 2;
+  }
+  .aside-2 {
+    order: 3;
+  }
+  footer {
+    order: 4;
+  }
+}
